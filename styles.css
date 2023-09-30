@@ -47,11 +47,7 @@ header {
   height: auto;
   margin: 0 auto;
   border-radius: 50%;
-  border: 10px solid #9c89a4;
-}
-
-#navbar ul li {
-  margin-bottom: 10px;
+  border: 10px solid var(--secondary-color);
 }
 
 #navbar a {
@@ -59,10 +55,24 @@ header {
   color: white;
   font-size: 18px;
   font-weight: bold;
+  transition: color 0.3s ease;
 }
 
 #navbar a:hover {
   color: #CB4773;
+}
+
+#navbar a:after {
+  content: "";
+  display: block;
+  width: 0;
+  height: 2px;
+  background: white;
+  transition: width 0.3s ease;
+}
+
+#navbar a:hover:after {
+  width: 100%;
 }
 
 /* Home section styles */
@@ -92,7 +102,7 @@ header {
 }
 
 #home .name {
-  color: #744A7F;
+  color: var(--primary-color);
 }
 
 #home .name:hover {
@@ -282,13 +292,11 @@ form {
   font-family: var(--heading-title-family);
   color: #343a40;
   width: 85%;
-
 }
 
 label {
   display: block;
   margin-bottom: 8px;
-  
 }
 
 input,
@@ -312,5 +320,5 @@ button {
 }
 
 button:hover {
-  background-color: #744A7F;
+  background-color: #CB4773;
 }
